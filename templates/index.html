@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body style=" font-family: Arial, sans-serif;background-color: #f8f8f8;margin: 0;padding: 0;
+">
+    <h1>Sentiment Analysis of Tweets</h1>
+    <form action="/" method="post">
+        <label for="tweet_text">Enter a Tweet:</label><br>
+        <textarea id="tweet_text" name="tweet_text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    {% if tweet_text %}
+    <p>The tweet text of the tweet is: {{ tweet_text }}</p>
+    {% endif %}
+
+    {% if sentiment %}
+        <p>The sentiment of the tweet is: {{ sentiment }}</p>
+    {% endif %}
+</body>
+</html>
