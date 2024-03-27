@@ -14,6 +14,7 @@ with open('models/LRmodel.pkl', 'rb') as f:
 @app.route('/', methods=['GET', 'POST'])
 def index():
     sentiment = None
+    tweet_text= ""
     try:
         if request.method == 'POST':
             # Get the tweet text from the form
