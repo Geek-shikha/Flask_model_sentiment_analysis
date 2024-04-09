@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        VIRTUAL_ENV_DIR = 'myprojectenv'
+        VENV_PATH = 'myprojectenv'
         FLASK_APP = 'myproject.py'
     }
 
